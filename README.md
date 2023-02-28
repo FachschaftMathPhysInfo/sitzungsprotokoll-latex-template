@@ -1,0 +1,1 @@
+# sitzungsprotokoll-latex-template
