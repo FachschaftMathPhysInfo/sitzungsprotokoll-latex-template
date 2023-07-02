@@ -105,7 +105,7 @@ Vom Fachschaftsrat Informatik anwesend:\\ \FSRInfoNamen\\ \textbf{\FSRInfoBeschl
           at (current page.south west)
                {\parbox{8cm}{\raggedright\begin{tiny} Gemeinsame Sitzung der Fachschaften Mathe, Physik und Informatik und der Fachschaftsräte Mathe, Physik und Informatik am \datum.\\
                Simo: \simo\ Protokoll: \protokoll\\
-               FSR-Physik: \FSRPhysikNamen\ (\FSRMatheBeschlussf)\\
+               FSR-Physik: \FSRPhysikNamen\ (\FSRPhysikBeschlussf)\\
                FSR-Mathe: \FSRMatheNamen\ (\FSRMatheBeschlussf)\\
                FSR-Info: \FSRInfoNamen\ (\FSRInfoBeschlussf)\\
                 \end{tiny}}};
