@@ -2,88 +2,60 @@
 % !TEX encoding   = UTF-8
 % !TEX spellcheck = de_DE
 
-\documentclass[11pt, fachschaft=mathphys,twosided=true]{mathphys-protocol}
-\usepackage{booktabs}
-\usepackage{hyperref}
-\renewcommand\thesection{TOP \arabic{section}:}
-\renewcommand*\thesubsection{TOP \arabic{section}.\arabic{subsection}:}
-\renewcommand\contentsname{Tagesordnung}
-\newenvironment{antrag}{\begin{quote}\begin{itshape}}{\end{itshape}\end{quote}}
-
-%-------------------------------------------------
-% Konsensvorlagen (ggf. anpassen!)
-%-------------------------------------------------
-\newcommand{\konsens}[1]{In der Fachschaftssitzung MathPhysInfo, sowie in den anwesenden Fachschaftsräten, besteht Konsens ohne Bedenken.\\} % immer die Anzahl der Anwesenden anpassen!
-\newcommand{\konsensLB}[1]{In der Fachschaftssitzung MathPhysInfo, sowie in den anwesenden Fachschaftsräten, besteht Konsens mit leichten Bedenken.\\} % immer die Anzahl der Anwesenden anpassen!
-\newcommand{\konsensE}[1]{In der Fachschaftssitzung MathPhysInfo, sowie in den anwesenden Fachschaftsräten, besteht Konsens mit Enthaltung.\\} % immer die Anzahl der Anwesenden anpassen!
-\newcommand{\konsensFsrPhys}{Die Fachschaftsratssitzung Physik entscheidet einstimmig, den Beschluss entsprechend der Entscheidung der Fachschaftssitzung MathPhysInfo umzusetzen.\\}
-% \newcommand{\konsensFsrMathe}{Die Fachschaftsratssitzung Mathematik entscheidet einstimmig, den Beschluss entsprechend der Entscheidung der Fachschaftssitzung MathPhysInfo umzusetzen.\\}
-\newcommand{\konsensFsrInfo}{Die Fachschaftsratssitzung Informatik entscheidet einstimmig, den Beschluss entsprechend der Entscheidung der Fachschaftssitzung MathPhysInfo umzusetzen.\\}
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{1em}
-
-
+\documentclass[11pt,twosided=true]{mathphys-protocol}
 %-------------------------------------------------
 % Informationen zur Sitzung, Werte anpassen!
 %-------------------------------------------------
-\newcommand{\simo}{Kai-Uwe}
-\newcommand{\tipper}{Max Müller}
-\newcommand{\sbegin}{18:15 Uhr}
-\newcommand{\sende}{xx:xx Uhr}
-\def\datum{08.02.2023}
-\def\FSRPhysik{FSR 1, FSR 2}
-\def\FSRMathe{FSR 1, FSR 2}
-\def\FSRInfo{FSR 1, FSR 2}
-\def\besschlussf{JA}
+\renewcommand{\simo}{Wunderbare Simo}
+\renewcommand{\protokoll}{Ehrenprotokollant*in}
+\renewcommand{\sbegin}{18:15 Uhr}
+\renewcommand{\sende}{xx:xx Uhr}
+\renewcommand{\datum}{tt.mm.yyyy}
+% {Namen der anwesenden FSR}{Sind die FSR beschlussfähig? ("Beschlussfähig" wenn 2 von 3 da, sonst "Nicht Beschlussfähig"}
+\FSRPhysik{}{(Nicht) Beschlussfähig}
+\FSRMathe{}{(Nicht) Besschlussfähig}
+\FSRInfo{}{(Nicht) Beschlussfähig}
+
+% Konsenstufen 1-6 in geschweifte Klammern eintragen 
 
 \begin{document}
-\date{\vspace{-2em} \datum \vspace{-1em}} % Datum ersetzen
-\title{\vspace{-2em}Vorläufiges Protokoll der Fachschaftssitzung MathPhysInfo}
-\maketitle
 
-\begin{tabbing}
-    \textbf{Sitzungsmoderation:}\quad\=\simo \\% SiMo einfügen
-    \textbf{Protokoll:}\> \tipper \\% Protokoll einfügen
-    \textbf{Beginn:}\>\sbegin\\
-    \textbf{Ende:}\>\sende\\ % Sitzungsende einfÃ¼gen
-\end{tabbing}
+\maketitlepage
 
-\section{Begrüßung}
-    Die Sitzungsmoderation begrüßt die anwesenden Mitglieder der Studienfachschaften Mathematik, Physik und Informatik und eröffnet so die Fachschaftsvollversammlung der Studienfachschaften Mathematik, Physik und Informatik.
+\Tagesordnung{1} % Konsensstufe 1-6
 
-\section{Feststellung der Beschlussfähigkeiten}
-    Fachschaftsrat Physik, Mathe und Informatik sind alle Beschlussfähig.
+\nextsimo{Name} % SiMo nachste Woche einfugen
 
-\section{Beschluss des Protokolls der letzten Sitzung}
+\section{Protokolle}
 
+\protokollbeschluss{Datum}{1} % Datum und Konsensstufe
+% Der Beschluss des Protokolls vom tt.mm.yyyy wird auf die nächste Sitzung vertagt.
+
+%%%% Achte ab hier darauf, dass Dopplungen der Standard TOPs gelöscht werden. %%%%
+
+\section{Ein antrag}
 \begin{antrag}
-    Annahme des Protokolls vom xx. Monat 2019. \\% Datum einfügen
+Die Fachschaft macht was auch immer und ist cool.
 \end{antrag}
-\konsensE{}
+%Abstimmungsergebnis
+\konsens{3}
 
-\section{Feststellen der Tagesordnung}
-\begin{antrag}
-    Die Tagesordnung wird in der vorliegenden Form angenommen.
-\end{antrag}
-\konsens{}
+\section{Finanzantrag}
+\Antrag{% Summe, Hausholtsposten, Zweck
+    \finanzantragstext{666€}{xxx.0217}{Anschaffung eines Blåhajs}%
+}{%
+    Hier eine GUTE Begründung.%
+}{%
+    \FSReinstimmig\\% wichtig!!!!!
+    \konsens{2}%
+}
 
-\section{Sitzungsmoderation für die nächste Sitzung}
-    Die Sitzungsmoderation für die Fachschaftssitzung MathPhysInfo der nächsten Woche wird von xxx übernommen. % SiMo nachste Woche einfugen
+\section{Aktuelles aus Studium und Lehre}
 
-%%%% Achte ab hier darauf, dass Dopplungen der Standard TOPs gelöcht werden. %%%%
-%$sections
-\section{Finanzanträge}
-\textbf{Beschluss:} Um was geht es bei dem Finanzantrag?\\
-\textbf{Datum:} \datum \\
-\textbf{Postennr. im Haushaltsplan:} xxx.xxxx\\
-\textbf{Betrag:} 0 €\\
-\textbf{Ergebnis der Abstimmung:} EINSTIMMIG oder JA/NEIN/ENTHALTUNG\\
-\subsection*{Beschlusstext:}
+\section{Berichte}
 
-\subsection*{Begründung:} TEXT
 
+\section{Sonstiges}
 
 \emph{Die Sitzungmoderation schließt die Sitzung um \sende.}
-
 \end{document}
